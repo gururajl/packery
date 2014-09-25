@@ -77,7 +77,7 @@ Packery.prototype._resetLayout = function() {
   var packer = this.packer;
   // packer settings, if horizontal or vertical
   if ( this.options.isHorizontal ) {
-    packer.width = Number.POSITIVE_INFINITY;
+    packer.width = this.size.innerWidth + this.gutter;
     packer.height = this.size.innerHeight + this.gutter;
     packer.sortDirection = 'rightwardTopToBottom';
   } else {
